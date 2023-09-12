@@ -13,7 +13,8 @@ with open("config.json", "r") as c:
 def search_phone_number(ph_no, country_code):
     phone_number = ph_no
     country_code = country_code
-    installation_id = params['installation_id']
+    # installation_id = params['installation_id']
+    installation_id = "a1i0q--hs2KPwF7VvETASq_Oa5lNkraRmIEM5V49dIzU-uIW4BNBb6iF96xdjmNy"
 
     response = asyncio.run(search_phonenumber(phone_number, country_code, installation_id))
     # print(response)
