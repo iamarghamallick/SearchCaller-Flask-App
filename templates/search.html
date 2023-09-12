@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h6>Search Result for {{mobile}}</h6>
+    <ul class="m-0 p-0 mt-2">
+        <li class="d-flex flex-column align-items-center justify-content-center py-2 px-1 rounded m-2 bg-{{status}}">
+            <h1>{{name}}</h1>
+
+            {% if status == "danger" %}
+            <div class="d-flex justify-content-around w-100 gap-2">
+                <h6>Alert - SPAM DETECTED</h6>
+                <h6>TOP SPAMMER</h6>
+            </div>
+            {% endif %}
+
+        </li>
+        <li class="d-flex align-items-center py-2 px-1 rounded m-2" style="background-color: #343a40;">
+            <i class="fa-solid fa-phone m-3"></i>
+            <div class="d-flex flex-column">
+                <p>Carrier - {{carrier}}</p>
+                <h5>{{national_format}}</h5>
+            </div>
+        </li>
+        <li class="d-flex align-items-center py-2 px-1 rounded m-2" style="background-color: #343a40;">
+            <i class="fa-solid fa-location-dot m-3"></i>
+            <div class="d-flex flex-column">
+                <p>Address</p>
+                <h5>{{city}}, {{countryCode}}</h5>
+            </div>
+        </li>
+        <li class="d-flex align-items-center py-2 px-1 rounded m-2" style="background-color: #343a40;">
+            <i class="fa-solid fa-envelope m-3"></i>
+            <div class="d-flex flex-column">
+                <p>Email</p>
+                <h6>{{email}}</h6>
+            </div>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

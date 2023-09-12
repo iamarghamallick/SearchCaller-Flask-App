@@ -1,0 +1,76 @@
+{
+  "data": {
+    "data": [
+      {
+        "access": "PUBLIC",
+        "addresses": [
+          {
+            "address": "IN",
+            "city": "city",
+            "countryCode": "IN",
+            "timeZone": "+05:30",
+            "type": "address"
+          }
+        ],
+        "badges": [
+          "verified",
+          "user"
+        ],
+        "cacheTtl": 86400000,
+        "commentsStats": {
+          "count": 1,
+          "showComments": false,
+          "timestamp": 1666703071762
+        },
+        "enhanced": true,
+        "gender": "UNKNOWN",
+        "id": "id",
+        "internetAddresses": [
+          {
+            "caption": "name here",
+            "id": "email here",
+            "service": "email",
+            "type": "internetAddress"
+          }
+        ],
+        "manualCallerIdPrompt": false,
+        "name": "name here",
+        "ns": 0,
+        "phones": [
+          {
+            "carrier": "carrier name",
+            "countryCode": "IN",
+            "dialingCode": 91,
+            "e164Format": "+919999999999",
+            "nationalFormat": "099999 99999",
+            "numberType": "MOBILE",
+            "type": "openPhone"
+          }
+        ],
+        "score": 0.9,
+        "searchWarnings": [],
+        "sources": [],
+        "surveys": [
+          {
+            "frequency": 86400,
+            "id": "id",
+            "passthroughData": "data",
+            "perNumberCooldown": 31536000
+          },
+          {
+            "frequency": 86400,
+            "id": "id",
+            "passthroughData": "data",
+            "perNumberCooldown": 31536000
+          }
+        ],
+        "tags": []
+      }
+    ],
+    "provider": "provider name",
+    "stats": {
+      "sourceStats": []
+    }
+  },
+  "status_code": 200
+}
