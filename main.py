@@ -6,14 +6,9 @@ from truecallerpy import search_phonenumber
 app = Flask(__name__)
 
 
-with open("config.json", "r") as c:
-    params = json.load(c)['params']
-
-
 def search_phone_number(ph_no, country_code):
     phone_number = ph_no
     country_code = country_code
-    # installation_id = params['installation_id']
     installation_id = "a1i0q--hs2KPwF7VvETASq_Oa5lNkraRmIEM5V49dIzU-uIW4BNBb6iF96xdjmNy"
 
     response = asyncio.run(search_phonenumber(phone_number, country_code, installation_id))
@@ -82,5 +77,3 @@ def search_json(ph):
     return search_phone_number(ph, "IN")
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
