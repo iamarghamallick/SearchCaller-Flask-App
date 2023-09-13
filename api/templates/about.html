@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <img src="{{ url_for('static', filename='search-caller.png') }}" alt="app-icon" style="width: 320px;">
+    <h2 class="text-center">Welcome to SearchCaller</h2>
+    <br/>
+    <h6 class="text-center">At SearchCaller, we are committed to revolutionizing the way you manage your calls and protect your privacy. Our Truecaller-like web app, powered by Flask and Truecallerpy, is designed to provide you with a seamless and efficient experience when it comes to identifying incoming calls and safeguarding your communication.</h6>
+</div>
+
+{% endblock %}

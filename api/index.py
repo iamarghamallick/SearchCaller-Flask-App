@@ -21,6 +21,16 @@ def main():
     return render_template('index.html')
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if request.method == 'POST':
@@ -77,3 +87,5 @@ def search_json(ph):
     return search_phone_number(ph, "IN")
 
 
+# if __name__ == "__main__":
+#     app.run()
