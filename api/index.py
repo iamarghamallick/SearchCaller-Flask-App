@@ -1,7 +1,10 @@
-import json
+from dotenv import dotenv_values
 from flask import Flask, render_template, request
 import asyncio
+import os
 from truecallerpy import search_phonenumber
+
+config = dotenv_values(".env")
 
 app = Flask(__name__)
 
@@ -9,7 +12,7 @@ app = Flask(__name__)
 def search_phone_number(ph_no, country_code):
     phone_number = ph_no
     country_code = country_code
-    installation_id = "a1i0q--hs2KPwF7VvETASq_Oa5lNkraRmIEM5V49dIzU-uIW4BNBb6iF96xdjmNy"
+    installation_id = os.getenv("INSTALLATION_ID")
 
     response = asyncio.run(search_phonenumber(phone_number, country_code, installation_id))
     # print(response)
@@ -87,5 +90,5 @@ def search_json(ph):
     return search_phone_number(ph, "IN")
 
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
